@@ -1,58 +1,70 @@
-*{
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+/* Resetting all elements to remove margin, padding, and box-sizing settings */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* Body styling */
 body {
-  min-height: 100vh;
-  background: #000000;
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite;
-    color: #eaefef;
-  font-family: 'outfit';
+  min-height: 100vh; /* Make sure the body takes at least the full height of the viewport */
+  background: #000000; /* Solid black background */
+  background-size: 400% 400%; /* Background size for any gradient or image */
+  animation: gradientAnimation 10s ease infinite; /* Smooth gradient animation */
+  color: #eaefef; /* Light grey text color for readability */
+  font-family: 'Righteous', sans-serif; /* Applying 'Righteous' font to all text in body */
 }
 
+/* Keyframes for the background animation to create a dynamic visual effect */
 @keyframes gradientAnimation {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
-.title-box{
-  position: relative;
+/* Title box for prominent headings */
+.title-box {
+  position: relative; /* Relative positioning for absolute positioning of children */
 }
-.title-box h1{
-  padding: 0px 30px;
-  font-size: 60px;
-  font-weight: 600;
-}
-.title-box img{
-  width: 160px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-}
-@media(max-width: 768px){
 
-  .about-title img{
-      width: 130px;
-      right: -20px;
+.title-box h1 {
+  padding: 0px 30px; /* Padding to ensure spacing within the container */
+  font-size: 60px; /* Large font size for heading */
+  font-weight: 600; /* Semi-bold font weight */
+  font-family: 'Righteous', sans-serif; /* Ensuring the title uses 'Righteous' */
+}
+
+.title-box img {
+  width: 160px; /* Width of image/logo */
+  position: absolute; /* Absolute positioning to place image at the bottom-right */
+  bottom: 0; /* Align image to the bottom */
+  right: 0; /* Align image to the right */
+  z-index: -1; /* Place image behind the text */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .about-title img {
+    width: 130px; /* Smaller image width for smaller screens */
+    right: -20px; /* Adjust position to stay within layout on smaller devices */
   }
-  .title-box h1{
-    padding: 0px;
-    font-size: 40px;
+
+  .title-box h1 {
+    padding: 0px; /* Remove padding on smaller screens */
+    font-size: 40px; /* Smaller font size for smaller screens */
   }
-  .title-box img{
-    width: 100px;
-    right: -40px;
+
+  .title-box img {
+    width: 100px; /* Further reduce image size for very small screens */
+    right: -40px; /* Adjust image position */
   }
 }
